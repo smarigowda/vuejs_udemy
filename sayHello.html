@@ -22,12 +22,14 @@
     <![endif]-->
   <div id="app">
     <h1>{{ sayHello() }}</h1>
+    <h2></h2><a v-bind:href="link">Google !</a><h2>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        title: 'title = Hello World ! Welcome to Vue js'
+        title: 'title = Hello World ! Welcome to Vue js',
+        link: 'http://google.com'
       },
       methods: {
         sayHello: function () {
