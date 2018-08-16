@@ -21,8 +21,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <div id="app">
-    <input type="text" v-on:input="changeTitle" />
-    <p>{{title}}</p>
+    <h1>{{ sayHello() }}</h1>
   </div>
   <script>
     new Vue({
@@ -31,8 +30,8 @@
         title: 'Hello world!'
       },
       methods: {
-        changeTitle: function (event) {
-          this.title = event.target.value;
+        sayHello: function () {
+          return 'Hello World ! Welcome to Vue js';
         }
       }
     })
