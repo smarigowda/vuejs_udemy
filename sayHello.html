@@ -27,11 +27,11 @@
     new Vue({
       el: '#app',
       data: {
-        title: 'Hello world!'
+        title: 'title = Hello World ! Welcome to Vue js'
       },
       methods: {
         sayHello: function () {
-          return 'Hello World ! Welcome to Vue js';
+          return this.title;
         }
       }
     })
