@@ -23,14 +23,17 @@
   <div id="app">
     <h1 v-once>{{ title }}</h1>
     <a>{{ sayHello() }}</a>
-    <h2></h2><a v-bind:href="link">Google !</a><h2>
+    <h2></h2><a v-bind:href="link">Google !</a></h2>
+    <hr>
+    <p v-html="finishedLink"></p>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
         title: 'Hello World Once!',
-        link: 'http://google.com'
+        link: 'http://google.com',
+        finishedLink: '<a href="http://bbc.co.uk">BBC News</a>'
       },
       methods: {
         sayHello: function () {
