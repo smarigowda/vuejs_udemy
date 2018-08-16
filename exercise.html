@@ -23,14 +23,20 @@
   <div id="exercise">
     <p>Vue js is pretty cool - {{name}}</p>
     <p>{{ age * 3}}</p>
-    <h2>{{ randomNumber() }}</h2>
+    <hr/>
+    <p>A random number between zero to one</p>
+    <h2> {{ randomNumber() }}</h2>
+    <div>
+      <img v-bind:src="imageUrl" alt="">
+    </div>
   </div>
   <script>
     new Vue({
       el: '#exercise',
       data: {
         name: 'Santosh Marigowda!',
-        age: 44
+        age: 44,
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT696sXpITDL744PLQ1mUcxItViF2Bp6I6iyhbL3qQRkvymf2f2Xg'
       },
       methods: {
         randomNumber: () => {
