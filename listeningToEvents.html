@@ -21,23 +21,18 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <div id="app">
-    <h1 v-once>{{ title }} Once!</h1>
-    <a>{{ sayHello() }}</a>
-    <h2><a v-bind:href="link">Google !</a></h2>
-    <hr>
-    <p v-html="finishedLink"></p>
+    <button v-on:click="increment">Click Me</button>
+    <p>{{ count }}</p>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        title: 'Hello World',
-        link: 'http://google.com',
-        finishedLink: '<a href="http://bbc.co.uk">BBC News</a>'
+        count: 0
       },
       methods: {
-        sayHello: function () {
-          return this.title = 'Updated Hello World !';
+        increment: function () {
+          return this.count++
         }
       }
     })

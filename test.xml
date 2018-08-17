@@ -1,0 +1,23 @@
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+    <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+      <vmap:AdTagURI templateType="vast3"><![CDATA[https://skygo.neodatagroup.com/ad/qVod.jsp?loc=stb_-1q-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_pre_dasp_pc_01&fmt=fmt_vast_pre_spotId&user=5fbc4f27d63662f5bfc83588b05f0e4971958842ce11ac82&device=pc&vodId=166971&nodeId=&nodeIdEc=&breakType=PRE&breakCategory=DASP&breakSeqId=1&skyP=true&conn=wifi&adv=true&rnd=1534497360391]]></vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:21:43" breakType="linear" breakId="midoll">
+    <vmap:AdSource id="midoll-ad-1" allowMultipleAds="true" followRedirects="true">
+      <vmap:AdTagURI templateType="vast3"><![CDATA[https://skygo.neodatagroup.com/ad/qVod.jsp?loc=stb_-1q-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_mid_dasp_pc_01&fmt=fmt_vast_mid_spotId&user=5fbc4f27d63662f5bfc83588b05f0e4971958842ce11ac82&device=pc&vodId=166971&nodeId=&nodeIdEc=&breakType=MID&breakCategory=DASP&breakSeqId=1&skyP=true&conn=wifi&adv=true&rnd=1534497360391]]></vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:40:45" breakType="linear" breakId="midoll">
+    <vmap:AdSource id="midoll-ad-2" allowMultipleAds="true" followRedirects="true">
+      <vmap:AdTagURI templateType="vast3"><![CDATA[https://skygo.neodatagroup.com/ad/qVod.jsp?loc=stb_-1q-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_mid_dasp_pc_02&fmt=fmt_vast_mid_spotId&user=5fbc4f27d63662f5bfc83588b05f0e4971958842ce11ac82&device=pc&vodId=166971&nodeId=&nodeIdEc=&breakType=MID&breakCategory=DASP&breakSeqId=2&skyP=true&conn=wifi&adv=true&rnd=1534497360391]]></vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="end" breakType="linear" breakId="postroll">
+    <vmap:AdSource id="postroll-ad-1" allowMultipleAds="false" followRedirects="true">
+      <vmap:AdTagURI templateType="vast3"><![CDATA[https://skygo.neodatagroup.com/ad/qVod.jsp?loc=stb_-1q-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_-1l-stb_pos_dasp_pc_01&fmt=fmt_vast_pos_spotId&user=5fbc4f27d63662f5bfc83588b05f0e4971958842ce11ac82&device=pc&vodId=166971&nodeId=&nodeIdEc=&breakType=POS&breakCategory=DASP&breakSeqId=1&skyP=true&conn=wifi&adv=true&rnd=1534497360391]]></vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+</vmap:VMAP>
+	
