@@ -23,16 +23,23 @@
   <div id="app">
     <button v-on:click="increment">Click Me</button>
     <p>{{ count }}</p>
+    <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}</p>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        count: 0
+        count: 0,
+        x: 0,
+        y: 0
       },
       methods: {
         increment: function () {
           return this.count++
+        },
+        updateCoordinates: function(event) { // arrow does not work here.
+          this.x = event.clientX;
+          this.y = event.clientY;
         }
       }
     })
