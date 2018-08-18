@@ -26,6 +26,7 @@
     <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}
       <span v-on:mousemove.stop="dummy">DEAD SPOT</span>
     </p>
+    <input type="text" class="type" v-on:keyup.space.enter="alertMe">
   </div>
   <script>
     new Vue({
@@ -48,6 +49,9 @@
         dummy: function(event) {
           // event.stopPropagation();
           console.log(event);
+        },
+        alertMe: function() {
+          alert('Alert!');
         }
       }
     })
