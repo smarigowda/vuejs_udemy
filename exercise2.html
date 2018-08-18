@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="default.css">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div id="app">
+    <div>
+      <h1>Exercise 1</h1>
+      <button v-on:click="showAlert">Show Alert</button>
+    </div>
+    <div>
+      <h1>Exercise 2</h1>
+      <h2>Update on On Key Up</h2>
+      <input type="text" class="text" v-on:keyup="update1">
+      <p>{{ value1 }}</p>
+    </div>
+    <div>
+        <h1>Exercise 3</h1>
+        <h2>Update on On Enter Key</h2>
+        <input type="text" class="text" v-on:keyup.enter="update2">
+        <p>{{ value2 }}</p>
+    </div>
+  </div>
+  <script>
+    console.log('vue code....');
+    new Vue({
+      el: '#app',
+      data: {
+        value1: '',
+        value2: ''
+      },
+      methods: {
+        showAlert: function() {
+          alert('Button clicked !');
+        },
+        update1: function(event) {
+          this.value1 = event.target.value;
+        },
+        update2: function(event) {
+          this.value2 = event.target.value;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
