@@ -21,7 +21,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <div id="app">
-    <button v-on:click="increment">Click Me</button>
+    <button v-on:click="increment(20, $event)">Click Me</button>
     <p>{{ count }}</p>
     <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}</p>
   </div>
@@ -34,8 +34,10 @@
         y: 0
       },
       methods: {
-        increment: function () {
-          return this.count++
+        increment: function (step, event) {
+          console.log(event);
+          return this.count = this.count + step;
+          
         },
         updateCoordinates: function(event) { // arrow does not work here.
           this.x = event.clientX;
