@@ -43,13 +43,22 @@
       },
       methods: {
         result: function() {
-          console.log('result function is called...');
+          // console.log('result function is called...');
           return this.counter > 5 ? 'counter is > 5' : 'counter < 5';
+        }
+      },
+      watch: {
+        counter: function(value) {
+          console.log('watcher: counter value updated to', value);
+          setTimeout(() => { // shoule be an arrow func to correctly bind this value.
+            console.log('setTimeout triggerred...');
+            this.counter = 0;
+          }, 5000)
         }
       },
       computed: {
         output: function() {
-          console.log('computed called, only when counter changes');
+          // console.log('computed called, only when counter changes');
           return this.counter > 5 ? 'counter is > 5' : 'counter < 5';
         }
       }
