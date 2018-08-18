@@ -23,11 +23,11 @@
   <div id="app">
     <div>
       <h1>Computed Property</h1>
-      <button v-on:click="counter++">Increase counter</button>
-      <button v-on:click="counter--">Decrease counter</button>
+      <button @click="counter++">Increase counter</button>
+      <button @click="counter--">Decrease counter</button>
       <p>{{ counter }}</p>
       <hr>
-      <button v-on:click="secondCounter++">Increase secondCounter</button>
+      <button @click="secondCounter++">Increase secondCounter</button>
       <p>{{ secondCounter }}</p>
       <p>Result: {{ result() }}</p>
       <p>Computed: {{ output }}</p>
