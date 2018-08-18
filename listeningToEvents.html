@@ -24,7 +24,7 @@
     <button v-on:click="increment(20, $event)">Click Me</button>
     <p>{{ count }}</p>
     <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}
-      <span v-on:mousemove="dummy">DEAD SPOT</span>
+      <span v-on:mousemove.stop="dummy">DEAD SPOT</span>
     </p>
   </div>
   <script>
@@ -46,7 +46,8 @@
           this.y = event.clientY;
         },
         dummy: function(event) {
-          event.stopPropagation();
+          // event.stopPropagation();
+          console.log(event);
         }
       }
     })
