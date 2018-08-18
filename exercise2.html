@@ -28,7 +28,7 @@
     <div>
       <h1>Exercise 2</h1>
       <h2>Update on On Key Up</h2>
-      <input type="text" class="text" v-on:keyup="update1">
+      <input type="text" class="text" v-on:keyup="value1 = $event.target.value">
       <p>{{ value1 }}</p>
     </div>
     <div>
