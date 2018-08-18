@@ -23,7 +23,9 @@
   <div id="app">
     <button v-on:click="increment(20, $event)">Click Me</button>
     <p>{{ count }}</p>
-    <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}</p>
+    <p v-on:mousemove="updateCoordinates">Co-Ordinates: x = {{ x }} y = {{ y }}
+      <span v-on:mousemove="dummy">DEAD SPOT</span>
+    </p>
   </div>
   <script>
     new Vue({
@@ -42,6 +44,9 @@
         updateCoordinates: function(event) { // arrow does not work here.
           this.x = event.clientX;
           this.y = event.clientY;
+        },
+        dummy: function(event) {
+          event.stopPropagation();
         }
       }
     })
