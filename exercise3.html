@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="default.css">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div id="app">
+    <div>
+      <p>Current value: {{ value }}</p>
+      <button @click="value += 5">Add 5</button>
+      <button @click="value += 1">Add 1</button>
+      <p>{{ result }}</p>
+    </div>
+    <div>
+      <input type="text" class="text">
+      <p>{{ value }}</p>
+    </div>
+  </div>
+  <script>
+    console.log('vue code....');
+    new Vue({
+      el: '#app',
+      data: {
+        value: 0
+      },
+      computed: {
+        result: function() {
+          return this.value < 37 ? 'Not there yet' : 'done';
+        }
+      },
+      watch: {
+        result: function() {
+          setTimeout(() => {
+            console.log('resetting value to 0...')
+            this.value = 0
+          }, 5000)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
