@@ -11,20 +11,29 @@
   <div id="app">
     <div class="demo" :style="{ backgroundColor: color }" ></div>
     <div class="demo" :style="myStyle"></div>
-    <div class="demo"></div>
+    <div class="demo" ></div>
     <hr>
+    <h3>Color</h3>
     <input type="text" v-model="color">
+    <h3>Width</h3>
+    <input type="text" v-model="width">
+    <h3>Height</h3>
+    <input type="text" v-model="height">
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
-        color: 'gray'
+        color: 'gray',
+        width: '50px',
+        height: '50px'
       },
       computed: {
         myStyle: function() {
           return {
-            backgroundColor: this.color
+            backgroundColor: this.color,
+            width: this.width,
+            height: this.height
           }
         }
       }
