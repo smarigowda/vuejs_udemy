@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="default.css">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="startProgress">Click to start progress bar...</button>
+    <div class="demo" :style="{ width: width + 'px' }"></div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        width: 0
+      },
+      methods: {
+        startProgress: function() {
+          const handle = setInterval(() => {
+            this.width += 10;
+            console.log(this.width);
+            if(this.width > 200) {
+              clearInterval(handle);
+            }
+          }, 1000)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
