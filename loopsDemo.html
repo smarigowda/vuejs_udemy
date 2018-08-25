@@ -12,7 +12,10 @@
 
 <body>
   <div id="app">
-    <p v-for="name in ingredients">{{ name }}</p>
+    <ul>
+        <li v-for="name in ingredients">{{ name }}</li>
+    </ul>
+    
   </div>
   <script>
     new Vue({
