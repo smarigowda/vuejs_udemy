@@ -12,11 +12,17 @@
 
 <body>
   <div id="app">
+    <div>
+      <p v-if="show">you can see me</p>
+      <p>Can you also see me?</p>
+      <button @click="show = !show">Click me to toggle show property</button>
+    </div>
   </div>
   <script>
     new Vue({
       el: '#app',
       data: {
+        show: true
       },
       methods: {
       }
