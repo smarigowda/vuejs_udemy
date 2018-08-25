@@ -17,6 +17,10 @@
       <p v-else="!show">Now you can see me</p>
       <p>Can you also see me?</p>
       <button @click="show = !show">Click me to toggle show property</button>
+      <template v-if="show">
+        <h1>Heading</h1>
+        <p>Inside a template</p>
+      </template>
     </div>
   </div>
   <script>
