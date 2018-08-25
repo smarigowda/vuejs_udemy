@@ -15,7 +15,7 @@
     <div>
       <p v-if="show">you can see me <span>Hello...</span></p>
       <p v-else="!show">Now you can see me</p>
-      <p>Can you also see me?</p>
+      <p v-show="show">Can you also see me? using v-show</p>
       <button @click="show = !show">Click me to toggle show property</button>
       <template v-if="show">
         <h1>Heading</h1>
