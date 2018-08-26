@@ -15,7 +15,10 @@
     <ul>
         <li v-for="(name, index) in ingredients" v-bind:style="{color: 'red'}">{{ name }} ({{ index }})</li>
     </ul>
-    
+    <template v-for="(name, index) in ingredients">
+      <h1>{{ name }}</h1>
+      <p>{{ index }}</p>
+    </template>
   </div>
   <script>
     new Vue({
