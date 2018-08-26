@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="default.css">
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="value in testData">
+        <template v-if="Array.isArray(value)">
+          <div v-for="data in value">
+            {{ data }}
+          </div>
+        </template>
+        <template v-else>
+            <div>{{ value }}</div>
+        </template>
+        
+      </li>
+    </ul>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        testData: {
+          name: 'Santosh',
+          id: '7270',
+          data: [
+            1.67,
+            3.78,
+            9.80,
+            2.21
+          ]
+        }
+      },
+      methods: {
+      }
+    })
+  </script>
+</body>
+
+</html>
