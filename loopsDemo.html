@@ -13,7 +13,13 @@
 <body>
   <div id="app">
     <ul>
-        <li v-for="(name, index) in ingredients" v-bind:style="{color: 'red'}">{{ name }} ({{ index }})</li>
+      <li v-for="(name, index) in ingredients" v-bind:style="{color: 'red'}">{{ name }} ({{ index }})</li>
+    </ul>
+    <hr>
+    <ul>
+      <li v-for="person in persons">
+        <div v-for="(value, key, index) in person">{{ key }} : {{ value }} ({{ index }})</div>
+      </li>
     </ul>
     <template v-for="(name, index) in ingredients">
       <h1>{{ name }}</h1>
@@ -32,6 +38,7 @@
         persons: [
           { name: 'Santosh', age: 23, color: 'blue' },
           { name: 'Roopa', age: 20, color: 'pink' },
+          { name: 'Sukruthi', age: 10, color: 'yellow' },
         ]
       },
       methods: {
