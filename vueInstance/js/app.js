@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: '#app1',
   data: {
     title: 'The Vue js instance',
     showParagraph: false
@@ -17,5 +17,12 @@ new Vue({
     lowercaseTitle: function() {
       return this.title.toLowerCase();
     }
+  }
+})
+
+new Vue({
+  el: '#app2',
+  data: {
+    title: 'Second Vue instance'
   }
 })
