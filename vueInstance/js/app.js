@@ -1,9 +1,10 @@
+const data = {
+  title: 'The Vue js instance',
+  showParagraph: false
+}
 const vm1 = new Vue({
   el: '#app1',
-  data: {
-    title: 'The Vue js instance',
-    showParagraph: false
-  },
+  data: data,
   methods: {
     show: function() {
       this.showParagraph = true;
@@ -25,6 +26,9 @@ const vm1 = new Vue({
   }
 })
 
+console.log(vm1._data);
+console.log(vm1._data === data);
+
 setTimeout(function() {
   vm1.title = 'Changed by timer !';
   vm1.show();
@@ -44,3 +48,4 @@ const vm2 = new Vue({
     }
   }
 })
+console.log(vm2);
