@@ -26,8 +26,12 @@ const vm1 = new Vue({
 })
 
 setTimeout(function() {
-  vm1.title = 'Changed by timer !'
+  vm1.title = 'Changed by timer !';
+  vm1.show();
 }, 3000);
+
+vm1.newProp = 'New !';
+console.log(vm1);
 
 const vm2 = new Vue({
   el: '#app2',
