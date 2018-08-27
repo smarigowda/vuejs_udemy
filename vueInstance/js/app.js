@@ -1,4 +1,4 @@
-new Vue({
+const vm1 = new Vue({
   el: '#app1',
   data: {
     title: 'The Vue js instance',
@@ -17,12 +17,26 @@ new Vue({
     lowercaseTitle: function() {
       return this.title.toLowerCase();
     }
+  },
+  watch: {
+    title: function() {
+      alert('title changed: new title = ' + this.title)
+    }
   }
 })
 
-new Vue({
+setTimeout(function() {
+  vm1.title = 'Changed by timer !'
+}, 3000);
+
+const vm2 = new Vue({
   el: '#app2',
   data: {
     title: 'Second Vue instance'
+  },
+  methods: {
+    onChange: function() {
+      vm1.title = 'Title is updated by vm2'
+    }
   }
 })
