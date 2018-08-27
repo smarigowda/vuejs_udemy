@@ -31,6 +31,7 @@ const vm1 = new Vue({
 console.log(vm1._data);
 console.log(vm1._data === data);
 
+vm1.$refs.heading.innerText = 'Something else !'
 setTimeout(function() {
   vm1.title = 'Changed by timer !';
   vm1.show();
