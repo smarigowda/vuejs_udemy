@@ -8,7 +8,9 @@ const vm1 = new Vue({
   methods: {
     show: function() {
       this.showParagraph = true;
-      this.updateTitle('The Vue js instance (Updated)')
+      this.updateTitle('The Vue js instance (Updated)');
+      console.log(this.$refs);
+      this.$refs.myButton.innerText = 'Test !';
     },
     updateTitle: function(title) {
       this.title = title;
