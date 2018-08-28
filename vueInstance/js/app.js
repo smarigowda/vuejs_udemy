@@ -2,6 +2,11 @@ const data = {
   title: 'The Vue js instance',
   showParagraph: false
 }
+
+Vue.component('hello', {
+  template: '<h1>Hello Vue component !</h1>'
+})
+
 const vm1 = new Vue({
   // el: '#app1',
   data: data,
