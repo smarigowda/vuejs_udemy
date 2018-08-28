@@ -3,7 +3,7 @@ const data = {
   showParagraph: false
 }
 const vm1 = new Vue({
-  el: '#app1',
+  // el: '#app1',
   data: data,
   methods: {
     show: function() {
@@ -28,6 +28,7 @@ const vm1 = new Vue({
   }
 })
 
+vm1.$mount('#app1')
 console.log(vm1._data);
 console.log(vm1._data === data);
 
@@ -52,3 +53,9 @@ const vm2 = new Vue({
   }
 })
 console.log(vm2);
+
+const vm3 = new Vue({
+  template: '<h1>Hello !</h1>'
+})
+
+vm3.$mount('#app3')
